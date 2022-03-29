@@ -12,16 +12,16 @@ const Header = (props) => {
       <div className="navbar-collapse collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li onClick={() => document.getElementById('Profile').scrollIntoView({ behavior: 'smooth' })} className="nav-link">
-            <span id="ProfileButton" className="nav-btn">Profile <span className="sr-only">(current)</span></span>
+            <span id="ProfileButton" className="nav-btn">About <span className="sr-only">(current)</span></span>
           </li>
           <li onClick={() => document.getElementById('Experiences').scrollIntoView({ behavior: 'smooth' })} className="nav-link">
-            <span id="ExperiencesButton" className="nav-btn">Experiences</span>
+            <span id="ExperiencesButton" className="nav-btn">Pig law</span>
           </li>
           <li onClick={() => document.getElementById('Abilities').scrollIntoView({ behavior: 'smooth' })} className="nav-link">
-            <span id="AbilitiesButton" className="nav-btn">Abilities</span>
+            <span id="AbilitiesButton" className="nav-btn">History</span>
           </li>
           <li onClick={() => document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' })} className="nav-link">
-            <span id="ProjectsButton" className="nav-btn">Projects</span>
+            <span id="ProjectsButton" className="nav-btn">Gallery</span>
           </li>
           <li onClick={() => document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' })} className="nav-link">
             <span id="ContactButton" className="nav-btn">Contact</span>

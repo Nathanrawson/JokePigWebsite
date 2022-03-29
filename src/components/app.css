@@ -14,3 +14,21 @@
 #video > div > div.ui.segment > p{
     color:black;
 }
+
+.image-select{
+    height:60px;
+    width:100%;
+}
+
+#ProfileContainer div, #ProfileContainer h1{
+    color: black!important;;
+}
+
+.form-control{
+    margin-bottom:40px;
+}
+
+#ProfileContainer {
+    text-align: center;
+    justify-content: center;
+}

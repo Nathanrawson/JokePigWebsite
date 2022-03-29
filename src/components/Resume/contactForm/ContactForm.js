@@ -30,7 +30,7 @@ function sendEmail() {
 
 const ContactForm = () => {
     return (
-        <div> <SectionHeader h1="Contact Me!" h3="Call Me!" /><div className="contact-details"><div className="contact-overlay">
+        <div> <SectionHeader h1="Join Pig Cult" h3="Call Me!" /><div className="contact-details"><div className="contact-overlay">
             <div className="contact-details-section">
                 <h3 className="contact-details-text"><i className="fa fa-map-marker" aria-hidden="true"></i> Address</h3>
                 <p>Farmers market, Welwyn Garden City</p>

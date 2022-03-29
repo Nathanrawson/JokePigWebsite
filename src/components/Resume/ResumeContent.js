@@ -9,14 +9,33 @@ import Abilities from './abilities/Abilities'
 import ContactForm from './contactForm/ContactForm'
 import './ResumeContentMobileCss.css'
 import pigImage from './pigImage1.png'
+import getPage from '../../hooks/getPage'
 
 const ResumeContent = () => {
+  
     const [navClass, setNavClass] = useState("");
+    const [page, setPage] = useState (null);
     const nav = () => {
         return <Header navClass={navClass} navColor="dark" navId="Dark" />;
     }
-    window.onscroll = function () { myFunction() };
 
+    if(page == null){
+    const pageLoad = getPage();
+    pageLoad.then(function(result){
+        setPage(result);
+    });
+}
+console.log(page);
+if(page != null){
+console.log(page.data.galleryFIles)
+}
+    window.onscroll = function () { myFunction() };
+    const getImage = () => {
+        if(page != null && page.data.galleryFIles != null){
+            console.log(page.data)
+            document.getElementById("landingImageDiv").style.backgroundImage = `url(data:image/png;base64,${page.data.landingFile[0]})`
+        }
+    }
     function myFunction() {
         console.log(window.pageYOffset)
         //Add forloop array here
@@ -40,9 +59,9 @@ const ResumeContent = () => {
     }
     return (
         <div style={{ height: "100%" }} id="ResumeContent" >
-
-            <div style={{ height: "100%", backgroundSize: "contain", backgroundRepeat: "no-repeat",backgroundImage: `url(${pigImage}`, backgroundColor: "#03010c" }}>
-             
+     
+            <div id="landingImageDiv" style={{ height: "100%", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundColor: "#03010c" }}>
+             {getImage()}
                 <div id="landing-header">
                     <div onClick={() => document.getElementById('Profile').scrollIntoView({ behavior: 'smooth' })} >                 
                     </div>
@@ -51,6 +70,7 @@ const ResumeContent = () => {
                        <a className="btn btn-primary" href='/videos'>Pig tube</a>
                     </div>                  
                     </div>
+                   
                 </div>
                 <div className="col-xs" onClick={() => document.getElementById('Profile').scrollIntoView({ behavior: 'smooth' })} id="GoToProfileButton">
                     <i style={{ animation: "updown 1.5s ease infinite", position: 'relative' }} className="fa fa-chevron-down fa-2x"></i>
@@ -60,17 +80,17 @@ const ResumeContent = () => {
             {nav()}
             <div>
                 <Section color="#B9B9B9" id="Profile">
-                    <Profile />
+                    <Profile aboutContent={page != null ? page.data.contentOne : null}/>
                 </Section>
                 <Section color="#03010c" id="Experiences">
-                    <Experiences />
+                    <Experiences contentTwo= {page != null ? page.data.contentTwo : null}/>
                 </Section>
                 <Section color="#B9B9B9" id="Abilities">
-                    <Abilities />
+                    <Abilities contentThree= {page != null ? page.data.contentThree : null}/>
                 </Section>
 
                 <Section color="#03010c" id="Projects">
-                    <Projects />
+                    <Projects images={page != null ? page.data.galleryFIles : null}/>
                 </Section>
                 <Section color="#B9B9B9" id="Contact">
                     <ContactForm />
