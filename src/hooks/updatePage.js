@@ -16,13 +16,13 @@ if(postData.LandingFile.length > 0){
 }
     bodyFormData.append('ContentOne', postData.ContentOne);
     bodyFormData.append('ContentTwo', postData.ContentTwo);
-    bodyFormData.append('ContentThree', postData.ContentTwo);
+    bodyFormData.append('ContentThree', postData.ContentThree);
     bodyFormData.append('Id', '3fa85f64-5717-4562-b3fc-2c963f66afa6');
     //console.log(bodyFormData);
     try {
         var response = await axios({
             method: 'post',
-            url: `https://veiybapi.com/api/webisite/3fa85f64-5717-4562-b3fc-2c963f66afa6`,//'https://mlapi20220310230105.azurewebsites.net/project',
+            url: `https://veiybapi.com/api/website/3fa85f64-5717-4562-b3fc-2c963f66afa6`,//'https://mlapi20220310230105.azurewebsites.net/project',
             data: bodyFormData,
             headers: {
                 'Content-Type': 'multipart/form-data',

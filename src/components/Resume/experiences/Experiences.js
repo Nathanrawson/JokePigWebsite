@@ -5,9 +5,21 @@ import ExperiencesSection from './ExperiencesSection';
 
 
 const Experiences = (props) => {
+const getHtml = () => {
+    if(props.contentTwo != undefined){
+        var myProp = props.contentTwo;
+        return (<div className='danger-html' dangerouslySetInnerHTML={{__html: myProp }} />);
+    }
+}
+    // const htmlDecode = (input) => {
+    //     var e = document.createElement('div');
+    //     e.innerHTML = input;
+    //     return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    //   }
+
     return (<div className=""><SectionHeader h1="Pig Law" h3='“Don’t let yesterday take up too much of today.” – Will Rogers"' />
         <div className="experience-div">
-            {props.contentTwo}
+            {getHtml()}
             {/* <h2 className="mobile-title">Education</h2>
             <ExperiencesSection qualififcation="MSC Advanced Computer Science" place="University Of Hertfordshire" date="Sep 2019-Sep 2020" content="The course far broadened my understanding in key computer science concepts in areas such as Data Science, Computational Algorithms and Paradigms, Neural Networks and Machine Learning and Legal and ethical issues associated with software development." />
             <ExperiencesSection qualififcation="BA Business Management (Economics)" place="University Of East London" date="Sep 2015-May 2018" content="Here I learned Key business concepts in areas such as Human Resources, Marketing, Corporate Finance, Economics, Accountancy, Supply Chain Management and many more." />
@@ -22,4 +34,4 @@ const Experiences = (props) => {
     </div>);
 }
 
-export default Experiences
+export default Experiences;

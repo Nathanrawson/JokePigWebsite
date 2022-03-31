@@ -25,6 +25,11 @@ const ResumeContent = () => {
         setPage(result);
     });
 }
+const htmlDecode = (input) => {
+    var e = document.createElement('div');
+    e.innerHTML = input;
+    return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+  }
 console.log(page);
 if(page != null){
 console.log(page.data.galleryFIles)
@@ -36,6 +41,9 @@ console.log(page.data.galleryFIles)
             document.getElementById("landingImageDiv").style.backgroundImage = `url(data:image/png;base64,${page.data.landingFile[0]})`
         }
     }
+
+   
+
     function myFunction() {
         console.log(window.pageYOffset)
         //Add forloop array here

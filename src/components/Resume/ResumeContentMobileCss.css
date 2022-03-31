@@ -116,6 +116,18 @@
         #Experiences, #Projects, #Abilities{
             height:100vh;
         } 
+
+        .danger-html{
+            max-width: 100vw;
+            word-wrap: break-word
+        }
+
+        #ProfileContainer{
+            max-width: 100vw;
+        }
+
+       
+      
     
         #carouselExampleControls img{
             max-height: 75vh;

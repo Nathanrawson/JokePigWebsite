@@ -20,7 +20,21 @@
     width:100%;
 }
 
-#ProfileContainer div, #ProfileContainer h1{
+#ProfileContainer{
+    background-color: #f4abba;
+}
+#ProfileContainer h1{
+    color: white;
+}
+
+.editor-box{
+    background-color: white;
+    padding: 10px;
+    min-height: 200px;
+    margin-bottom: 40px;
+}
+
+#ProfileContainer div{
     color: black!important;;
 }
 
@@ -31,4 +45,8 @@
 #ProfileContainer {
     text-align: center;
     justify-content: center;
+}
+
+#ProfileContainer label{
+    font-weight:600;
 }
