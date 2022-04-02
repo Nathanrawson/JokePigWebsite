@@ -63,10 +63,9 @@ const Login = () => {
                 {getErrors()}
                 <form id="CMSLoginForm" onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder="Username" className="form-control" required name="Username"{...register('Username', { maxLength: 30 })} />
-                    <input placeholder="Password" type="password" required className="form-control"{...register('Password', { maxLength: 30 })} />
-                
+                    <input placeholder="Password" type="password" required className="form-control"{...register('Password', { maxLength: 30 })} />           
                     <button id="#LoginButton" className="submit btn btn default" type="submit">Login</button>
-                    {/* <div className="register-password"><Link to="/login">Register</Link> | <Link to="/login">Forgot Password</Link></div> */}
+                    <div className="register-password"><a href="/register">Register</a></div>
                 </form>
                 </div>
             </div>
