@@ -30,14 +30,13 @@ const htmlDecode = (input) => {
     e.innerHTML = input;
     return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
   }
-console.log(page);
+
 if(page != null){
-console.log(page.data.galleryFIles)
+
 }
     window.onscroll = function () { myFunction() };
     const getImage = () => {
         if(page != null && page.data.galleryFIles != null){
-            console.log(page.data)
             document.getElementById("landingImageDiv").style.backgroundImage = `url(data:image/png;base64,${page.data.landingFile[0]})`
         }
     }
@@ -45,7 +44,6 @@ console.log(page.data.galleryFIles)
    
 
     function myFunction() {
-        console.log(window.pageYOffset)
         //Add forloop array here
         var sections = ['Profile', 'Experiences', 'Abilities', 'Projects', 'Contact']
         for (var i = 0; i < sections.length; i++) {

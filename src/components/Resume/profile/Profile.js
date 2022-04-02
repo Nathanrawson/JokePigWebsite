@@ -3,7 +3,6 @@ import SectionHeader from '.././SectionHeader';
 import './profileCss.css'
 
 const Profile = (props) => {
-    console.log(props);
 
     const getHtml = () => {
         if(props.aboutContent != undefined){

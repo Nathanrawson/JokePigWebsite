@@ -1,7 +1,12 @@
 import React from 'react';
+import IsAuthenitcated from '../auth/isAuthenticted';
 
 const Header = (props) => {
-
+const getAdminNav = () => {
+  if(IsAuthenitcated()){return (  <li onClick={() => document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' })} className="nav-link">
+            <span className="nav-btn"><a href='/contentManager'>Admin</a></span>
+          </li>)}
+}
   return (
 
     <div id={`${props.navId}`} className={props.navClass} > <nav id="resumeNavbar" className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -26,6 +31,7 @@ const Header = (props) => {
           <li onClick={() => document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' })} className="nav-link">
             <span id="ContactButton" className="nav-btn">Contact</span>
           </li>
+          { getAdminNav()}
         </ul>
       </div>
     </nav></div>

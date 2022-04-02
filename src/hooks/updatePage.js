@@ -2,7 +2,6 @@
 import tokenCookie from '../components/GetCookie'
 import axios from "axios";
 const UpdatePage = async (postData, loginRedirect) =>{
-    console.log(postData);
     var bodyFormData = new FormData();
     var filestest = [];
 

@@ -114,7 +114,7 @@
 
    
         #Experiences, #Projects, #Abilities{
-            height:100vh;
+            min-height:100vh;
         } 
 
         .danger-html{
@@ -134,5 +134,5 @@
         }
 
         #Profile{
-            height:100vh;
+            min-height:100vh;
         }

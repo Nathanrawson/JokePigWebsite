@@ -4,14 +4,12 @@ import mlApi from '../apis/MlApi'
 import React, { useState, useEffect } from 'react';
 
 const GetPage = async ()  => {
-console.log("testing")
    const GetPageData = async () => {
     try {
         var response = await axios({
             method: 'get',
-            url: 'https://veiybapi.com/api/website/3fa85f64-5717-4562-b3fc-2c963f66afa6',//'https://mlapi20220310230105.azurewebsites.net/project',
-            headers: {
-                'Authorization':`bearer ${tokenCookie("access_token")}`,
+            url: 'https://localhost:44307/api/website/3fa85f64-5717-4562-b3fc-2c963f66afa6',//'https://mlapi20220310230105.azurewebsites.net/project',
+            headers: {        
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }

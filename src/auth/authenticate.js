@@ -1,7 +1,8 @@
 import tokenCookie from '../components/GetCookie'
+import IsAuthenitcated from './isAuthenticted';
 
 const Authenticate = () => {
-    if(tokenCookie.length < 1){
+    if(!IsAuthenitcated()){
         window.location.replace("/login");
     }
 }

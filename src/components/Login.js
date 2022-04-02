@@ -28,7 +28,7 @@ const Login = () => {
 
             if (response.status === 200) {
                 document.cookie = `access_token=${response.data.token};`
-                window.location.replace("/profile");// navigate("/projects")
+                window.location.replace("/contentManager");// navigate("/projects")
             } else {
                 document.getElementById('#LoginButton').innerHTML = 'Login';
                 document.getElementById('#LoginButton').disabled = false;
@@ -59,7 +59,7 @@ const Login = () => {
             <div id="LoginRightContainer">
             <div className="" id="LoginDiv" style={{ textAlign: "center" }}>
                 <img src={veiybLogo}></img>
-                <h2 className='form-title'>Login to Veiyb</h2>
+                <h2 className='form-title'>Login pig</h2>
                 {getErrors()}
                 <form id="CMSLoginForm" onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder="Username" className="form-control" required name="Username"{...register('Username', { maxLength: 30 })} />

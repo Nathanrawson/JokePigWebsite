@@ -28,7 +28,6 @@ const AdminProfile = () => {
             setContentOne(result.data.contentOne);
             setContentTwo(result.data.contentTwo);
             setContentThree(result.data.contentThree);
-        console.log(result);
         }
     });
 }
@@ -37,16 +36,15 @@ const AdminProfile = () => {
         window.location.href = "/login";
     }
     const onSubmit = async (data) => {
+        document.getElementById('SubmitBtn').disabled = true;
+        document.getElementById('SubmitBtn').className += " spinner-border";
         data.ContentOne = contentOne;
         data.ContentTwo = contentTwo;
         data.ContentThree = contentThree;
-        console.log(data);
         var response = await UpdatePage(data, navigateToLogin);
 
         if(response != undefined)
-        {
-            document.getElementById('SubmitBtn').disabled = true;
-            document.getElementById('SubmitBtn').className += " spinner-border";
+        {          
             window.location.replace("/")
         };
     }

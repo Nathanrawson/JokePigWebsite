@@ -221,17 +221,17 @@ h2 {font-family: 'Montserrat', sans-serif;color: white}
 
 #ResumeContent{
    
-    height:1200px;
+  min-height:100vh;
 }
 
 #resumeBody{
     background-color: rgb(202, 202, 202);
-    height: 1000px;
+    min-height:100vh;
 }
 
 #ResumeSection{
   background-color: blue;
-  height: 100vh;
+  min-height:100vh;
 }
 
 
@@ -292,10 +292,6 @@ h2 {font-family: 'Montserrat', sans-serif;color: white}
   #landing-header{
     padding-top: 20vh;
   }
-}
-
-#Profile{
-  height:800px;
 }
 
 .centre{
