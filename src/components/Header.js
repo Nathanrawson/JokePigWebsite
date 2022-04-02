@@ -3,12 +3,11 @@ import IsAuthenitcated from '../auth/isAuthenticted';
 
 const Header = (props) => {
 const getAdminNav = () => {
-  IsAuthenitcated().then((result) => {
-    console.log(result)
-    if(result)
+    if(IsAuthenitcated())
+    {
     return (  <li onClick={() => document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' })} className="nav-link">
             <span className="nav-btn"><a href='/contentManager'>Admin</a></span>
-          </li>)})
+          </li>)}
 }
   return (
 
